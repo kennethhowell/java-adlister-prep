@@ -1,11 +1,11 @@
 package MVC;
 
 public class DaoFactory {
-    private static Products productsDao;
+    private static ProductsDAO productsDao;
 
-    public static Products getProductsDao(){
+    public static ProductsDAO getProductsDao(){
         if(productsDao == null) {
-            productsDao = new ListProducts();
+            productsDao = new ListProductsDAO(); //we would swap out the 'source' of the data here; e.g. producstDao = new MySQLProductsDAO()
         }
 
         return productsDao;

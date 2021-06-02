@@ -17,7 +17,7 @@ public class CreateProductServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, IOException {
-        Products productsDao = DaoFactory.getProductsDao();
+        ProductsDAO productsDao = DaoFactory.getProductsDao();
         // create a new product based on the submitted data
         String name = request.getParameter("name");
         double price = Double.parseDouble(request.getParameter("price"));
